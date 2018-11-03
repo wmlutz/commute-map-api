@@ -1,0 +1,13 @@
+{
+  "name": "commutermap",
+  "version": "0.0.1",
+  "description": "API that gives a equi-distant commuter radius map",
+  "main": "index.js",
+  "repository": "https://github.com/wmlutz/commute-map-api.git",
+  "author": "W. M. Lutz",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "hapi": "^17.6.4"
+  }
+}
