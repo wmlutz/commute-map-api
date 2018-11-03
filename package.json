@@ -8,7 +8,8 @@
   "license": "MIT",
   "private": false,
   "dependencies": {
-    "hapi": "^17.6.4"
+    "hapi": "^17.6.4",
+    "joi": "^14.0.4"
   },
   "scripts": {
     "start": "yarn run build && nodemon dist/index.js",
