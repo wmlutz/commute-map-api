@@ -12,21 +12,18 @@ server.route({
   method: 'POST',
   path: '/',
   handler: (request, h) => {
-    const {lat, long} = request.query;
-    let posit = new Posit({lat, long});
-    console.log('Posit', posit.toJSON());
+    const {lat, lon} = request.query;
+    let posit = new Posit({lat, lon});
     
     return h.response({
-      publicTransit: '',
-      driving: '',
-      combined: ''
+      circ: posit.toGeoJSON(5,50),
     }).code(200);
   },
   options: {
     validate:  {
       query: {
 				lat: Joi.number().min(-90).max(90).required(),
-				long: Joi.number().min(-180).max(180).required()
+				lon: Joi.number().min(-180).max(180).required()
       }
     }
   }
